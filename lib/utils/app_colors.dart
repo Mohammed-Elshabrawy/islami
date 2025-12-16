@@ -7,4 +7,5 @@ class AppColors {
   static const Color ofWhiteColor = Color(0xFFFFF5E3);
   static const Color brownColor = Color(0xFF946107);
 
+
 }
