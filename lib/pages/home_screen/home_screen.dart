@@ -6,7 +6,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Scaffold(),
+      body: Center(child: 
+        Image.asset("assets/images/logo/islami_logo.png"),)
     );
   }
 }
+
