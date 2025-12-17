@@ -3,6 +3,8 @@ import 'package:introduction_screen/introduction_screen.dart';
 import 'package:islami/pages/home_screen/home_screen.dart';
 import 'package:islami/utils/app_colors.dart';
 
+import '../../utils/app_assets.dart';
+
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
 
@@ -54,7 +56,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.only(top: 16, right: 16),
-            child: _buildImage("assets/images/logo/islami_logo.png"),
+            child: _buildImage(AppAssets.appLogo),
           ),
         ),
       ),
@@ -62,32 +64,32 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         PageViewModel(
           title: "Welcome To Islami App",
           body: "",
-          image: _buildImage('assets/images/onboarding/onboarding1.png'),
+          image: _buildImage(AppAssets.appOnboarding1),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Welcome To Islami",
           body: "We Are Very Excited To Have You In Our Community",
-          image: _buildImage('assets/images/onboarding/onboarding2.png'),
+          image: _buildImage(AppAssets.appOnboarding2),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Reading the Quran",
           body: "Read, and your Lord is the Most Generous",
-          image: _buildImage('assets/images/onboarding/onboarding3.png'),
+          image: _buildImage(AppAssets.appOnboarding3),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Bearish",
           body: "Praise the name of your Lord, the Most High",
-          image: _buildImage("assets/images/onboarding/onboarding4.png"),
+          image: _buildImage(AppAssets.appOnboarding4),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Holy Quran Radio",
           body:
               "You can listen to the Holy Quran Radio through the application for free and easily",
-          image: _buildImage('assets/images/onboarding/onboarding5.png'),
+          image: _buildImage(AppAssets.appOnboarding5),
           decoration: pageDecoration,
         ),
       ],

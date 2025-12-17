@@ -66,6 +66,8 @@ flutter:
     - assets/images/logo/
     - assets/images/onboarding/
     - assets/images/logo/islami_logo.png
+    - assets/images/home_screen/
+    - assets/images/icon/
 
 
 
