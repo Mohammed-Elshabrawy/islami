@@ -20,11 +20,11 @@ class _HomeScreenState extends State<HomeScreen> {
     AppAssets.appBG5,
   ];
   List<Widget> pages = [
-    const Placeholder( color: AppColors.blackColor,),
-    const Placeholder( color: AppColors.greyColor,),
-    const Placeholder( color: AppColors.goldColor,),
-    const Placeholder( color: AppColors.brownColor,),
-    const Placeholder( color: AppColors.ofWhiteColor,),
+    const Placeholder(color: AppColors.blackColor),
+    const Placeholder(color: AppColors.greyColor),
+    const Placeholder(color: AppColors.goldColor),
+    const Placeholder(color: AppColors.brownColor),
+    const Placeholder(color: AppColors.ofWhiteColor),
   ];
 
   @override
@@ -43,13 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
           SafeArea(
             child: Column(
               children: [
-                SizedBox(height: 16,),
+                SizedBox(height: 16),
                 Image.asset(AppAssets.appLogo),
                 pages[currentIndex],
               ],
             ),
           ),
-
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

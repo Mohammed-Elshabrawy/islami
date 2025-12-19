@@ -4,6 +4,7 @@ import 'package:islami/pages/home_screen/home_screen.dart';
 import 'package:islami/utils/app_colors.dart';
 
 import '../../utils/app_assets.dart';
+import '../../utils/responsive.dart';
 
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
@@ -27,23 +28,40 @@ class OnBoardingPageState extends State<OnBoardingPage> {
 
   @override
   Widget build(BuildContext context) {
-    const pageDecoration = PageDecoration(
-      titlePadding: EdgeInsets.only(top: 20),
-      titleTextStyle: TextStyle(
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenRatio = screenHeight / screenWidth;
+
+    double screenHeightRatio = screenHeight / Responsive.uiHeight;
+    double screenWidthRatio = screenWidth / Responsive.uiWidth;
+    double ratio = screenRatio / Responsive.uiRatio;
+
+    final pageDecoration = PageDecoration(
+      titlePadding: EdgeInsets.only(top: 20 * (screenHeightRatio)),
+      titleTextStyle: const TextStyle(
         fontSize: 24.0,
         fontWeight: FontWeight.bold,
         color: AppColors.goldColor,
       ),
-      bodyTextStyle: TextStyle(
+      bodyTextStyle: const TextStyle(
         fontSize: 20.0,
         color: AppColors.goldColor,
         fontWeight: FontWeight.bold,
       ),
-      bodyPadding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
+      bodyPadding: EdgeInsets.fromLTRB(
+        16.0 * screenWidthRatio,
+        16.0 * screenHeightRatio,
+        16.0 * screenWidthRatio,
+        0.0,
+      ),
       imageAlignment: Alignment.bottomCenter,
       imageFlex: 4,
       pageColor: AppColors.blackColor,
-      imagePadding: EdgeInsets.only(left: 16, right: 16, top: 40),
+      imagePadding: EdgeInsets.only(
+        left: 16 * screenWidthRatio,
+        right: 16 * screenWidthRatio,
+        top: 40 * screenHeightRatio,
+      ),
     );
 
     return IntroductionScreen(
@@ -55,7 +73,10 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         alignment: Alignment.center,
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.only(top: 16, right: 16),
+            padding: EdgeInsets.only(
+              top: 16 * screenHeightRatio,
+              right: 16 * screenWidthRatio,
+            ),
             child: _buildImage(AppAssets.appLogo),
           ),
         ),
@@ -108,12 +129,17 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         ),
       ),
       curve: Curves.fastLinearToSlowEaseIn,
-      controlsMargin: const EdgeInsets.all(16),
-      controlsPadding: const EdgeInsets.fromLTRB(8.0, 4.0, 8.0, 4.0),
-      dotsDecorator: const DotsDecorator(
-        size: Size(10.0, 10.0),
+      controlsMargin: EdgeInsets.all(16 * ratio),
+      controlsPadding: EdgeInsets.fromLTRB(
+        8.0 * screenWidthRatio,
+        4.0 * screenHeightRatio,
+        8.0 * screenWidthRatio,
+        4.0 * screenHeightRatio,
+      ),
+      dotsDecorator:  DotsDecorator(
+        size: Size(10.0*screenWidthRatio, 10.0*screenHeightRatio),
         color: Color(0xFFBDBDBD),
-        activeSize: Size(22.0, 10.0),
+        activeSize: Size(22.0*screenWidthRatio, 10.0*screenHeightRatio),
         activeColor: AppColors.goldColor,
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(25.0)),
