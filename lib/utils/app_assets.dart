@@ -2,7 +2,7 @@ class AppAssets {
   static const String onBoardingRoot = "assets/images/onboarding";
   static const String homeScreenRoot = "assets/images/home_screen";
   static const String iconRoot = "assets/images/icon";
-
+  static const String quranTabRoot = "assets/images/quran_tab";
 
   static const String appLogo = "assets/images/logo/islami_logo.png";
 
@@ -24,4 +24,7 @@ class AppAssets {
   static const String appIconRadio = "$iconRoot/radio.png";
   static const String appIconTime = "$iconRoot/time.png";
 
+  static const String appSuraImage = "$quranTabRoot/img_most_recent.png";
+  static const String appSuraTile = '$quranTabRoot/sura_tile.png';
+  static const String appSuraDetails = '$quranTabRoot/details.png';
 }

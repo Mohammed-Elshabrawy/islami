@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:islami/pages/tabs/hadith_tab/hadith_tab.dart';
+import 'package:islami/pages/tabs/quran_tab/quran_tab.dart';
+import 'package:islami/pages/tabs/sebha_tab/sebha_tab.dart';
 import '../../components/my_nav_bar_icon.dart';
 import '../../utils/app_assets.dart';
 import '../../utils/app_colors.dart';
+import '../tabs/radio_tab/radio_tab.dart';
+import '../tabs/time_tab/time_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,31 +25,32 @@ class _HomeScreenState extends State<HomeScreen> {
     AppAssets.appBG5,
   ];
   List<Widget> pages = [
-    const Placeholder(color: AppColors.blackColor),
-    const Placeholder(color: AppColors.greyColor),
-    const Placeholder(color: AppColors.goldColor),
-    const Placeholder(color: AppColors.brownColor),
-    const Placeholder(color: AppColors.ofWhiteColor),
+    QuranTab(),
+    HadithTab(),
+    SebhaTab(),
+    RadioTab(),
+    TimeTab(),
   ];
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
+        alignment: Alignment.topCenter,
         children: [
-          Center(
-            child: Image.asset(
-              images[currentIndex],
-              width: double.infinity,
-              height: double.infinity,
-              fit: BoxFit.cover,
-            ),
+          Image.asset(
+            images[currentIndex],
+            width: double.infinity,
+            height: double.infinity,
+            fit: BoxFit.cover,
           ),
-          SafeArea(
+          SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(height: 16),
                 Image.asset(AppAssets.appLogo),
+                SizedBox(height: 16),
                 pages[currentIndex],
               ],
             ),
