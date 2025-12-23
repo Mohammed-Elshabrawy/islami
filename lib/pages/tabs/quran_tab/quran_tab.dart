@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/model/sura_list/sura_list.dart';
-import 'package:islami/pages/tabs/quran_tab/sura_card.dart';
-import 'package:islami/pages/tabs/quran_tab/sura_row.dart';
+import 'package:islami/pages/tabs/quran_tab/widget/sura_card.dart';
+import 'package:islami/pages/tabs/quran_tab/widget/sura_row.dart';
 import 'package:islami/utils/app_assets.dart';
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_fonts.dart';
@@ -12,15 +12,10 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeightRatio = screenHeight / Responsive.uiHeight;
-    double screenWidthRatio = screenWidth / Responsive.uiWidth;
-
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.0 * screenWidthRatio),
+      padding: EdgeInsets.symmetric(horizontal: 20.0 * context.screenWidthRatio),
       child: Column(
-        spacing: 16 * screenHeightRatio,
+        spacing: 16 * context.screenHeightRatio,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextField(
@@ -45,12 +40,12 @@ class QuranTab extends StatelessWidget {
           ),
           Text("Most Recently", style: AppFonts.normal16White),
           SizedBox(
-            height: 150 * screenHeightRatio,
+            height: 150 * context.screenHeightRatio,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => SuraCard(index: index),
               separatorBuilder: (context, index) =>
-                  SizedBox(width: 10 * screenWidthRatio),
+                  SizedBox(width: 10 * context.screenWidthRatio),
               itemCount: 10,
             ),
           ),
@@ -61,10 +56,10 @@ class QuranTab extends StatelessWidget {
               physics: NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) => SuraRow(index: index),
               separatorBuilder: (context, index) => Padding(
-                padding:  EdgeInsets.symmetric(vertical: 10*screenHeightRatio),
+                padding:  EdgeInsets.symmetric(vertical: 10*context.screenHeightRatio),
                 child: Divider(
-                  indent: 40 * screenWidthRatio,
-                  endIndent: 40 * screenWidthRatio,
+                  indent: 40 * context.screenWidthRatio,
+                  endIndent: 40 * context.screenWidthRatio,
                 ),
               ),
               itemCount: SuraList.quran.length,

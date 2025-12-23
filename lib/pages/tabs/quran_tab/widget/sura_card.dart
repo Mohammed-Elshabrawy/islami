@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:islami/utils/responsive.dart';
 
-import '../../../model/sura_list/sura_list.dart';
-import '../../../utils/app_assets.dart';
-import '../../../utils/app_colors.dart';
-import '../../../utils/app_fonts.dart';
+import '../../../../model/sura_list/sura_list.dart';
+import '../../../../utils/app_assets.dart';
+import '../../../../utils/app_colors.dart';
+import '../../../../utils/app_fonts.dart';
 
 class SuraCard extends StatelessWidget {
   const SuraCard({super.key, required this.index});
@@ -12,7 +13,7 @@ class SuraCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(5),
+      padding: EdgeInsets.all(context.ratio*5),
       decoration: BoxDecoration(
         color: AppColors.goldColor,
         borderRadius: BorderRadius.circular(20),

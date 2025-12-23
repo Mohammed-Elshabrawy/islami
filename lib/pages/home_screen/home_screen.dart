@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:islami/pages/tabs/hadith_tab/hadith_tab.dart';
 import 'package:islami/pages/tabs/quran_tab/quran_tab.dart';
 import 'package:islami/pages/tabs/sebha_tab/sebha_tab.dart';
-import '../../components/my_nav_bar_icon.dart';
+import 'package:islami/utils/responsive.dart';
+import 'widget/my_nav_bar_icon.dart';
 import '../../utils/app_assets.dart';
 import '../../utils/app_colors.dart';
 import '../tabs/radio_tab/radio_tab.dart';
@@ -47,10 +48,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           SingleChildScrollView(
             child: Column(
+              spacing: context.screenHeightRatio*16,
               children: [
-                SizedBox(height: 16),
                 Image.asset(AppAssets.appLogo),
-                SizedBox(height: 16),
                 pages[currentIndex],
               ],
             ),

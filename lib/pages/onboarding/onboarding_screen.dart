@@ -28,16 +28,8 @@ class OnBoardingPageState extends State<OnBoardingPage> {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenRatio = screenHeight / screenWidth;
-
-    double screenHeightRatio = screenHeight / Responsive.uiHeight;
-    double screenWidthRatio = screenWidth / Responsive.uiWidth;
-    double ratio = screenRatio / Responsive.uiRatio;
-
     final pageDecoration = PageDecoration(
-      titlePadding: EdgeInsets.only(top: 20 * (screenHeightRatio)),
+      titlePadding: EdgeInsets.only(top: 20 * (context.screenHeightRatio)),
       titleTextStyle: const TextStyle(
         fontSize: 24.0,
         fontWeight: FontWeight.bold,
@@ -49,18 +41,18 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         fontWeight: FontWeight.bold,
       ),
       bodyPadding: EdgeInsets.fromLTRB(
-        16.0 * screenWidthRatio,
-        16.0 * screenHeightRatio,
-        16.0 * screenWidthRatio,
+        16.0 * context.screenWidthRatio,
+        16.0 * context.screenHeightRatio,
+        16.0 * context.screenWidthRatio,
         0.0,
       ),
       imageAlignment: Alignment.bottomCenter,
       imageFlex: 4,
       pageColor: AppColors.blackColor,
       imagePadding: EdgeInsets.only(
-        left: 16 * screenWidthRatio,
-        right: 16 * screenWidthRatio,
-        top: 40 * screenHeightRatio,
+        left: 16 * context.screenWidthRatio,
+        right: 16 * context.screenWidthRatio,
+        top: 40 * context.screenHeightRatio,
       ),
     );
 
@@ -74,8 +66,8 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.only(
-              top: 16 * screenHeightRatio,
-              right: 16 * screenWidthRatio,
+              top: 16 * context.screenHeightRatio,
+              right: 16 * context.screenWidthRatio,
             ),
             child: _buildImage(AppAssets.appLogo),
           ),
@@ -129,17 +121,21 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         ),
       ),
       curve: Curves.fastLinearToSlowEaseIn,
-      controlsMargin: EdgeInsets.all(16 * ratio),
-      controlsPadding: EdgeInsets.fromLTRB(
-        8.0 * screenWidthRatio,
-        4.0 * screenHeightRatio,
-        8.0 * screenWidthRatio,
-        4.0 * screenHeightRatio,
+      controlsMargin: EdgeInsets.all(16 * context.ratio),
+      controlsPadding: EdgeInsets.symmetric(
+        horizontal: 8.0 * context.screenWidthRatio,
+        vertical: 4.0 * context.screenHeightRatio,
       ),
-      dotsDecorator:  DotsDecorator(
-        size: Size(10.0*screenWidthRatio, 10.0*screenHeightRatio),
+      dotsDecorator: DotsDecorator(
+        size: Size(
+          10.0 * context.screenWidthRatio,
+          10.0 * context.screenHeightRatio,
+        ),
         color: Color(0xFFBDBDBD),
-        activeSize: Size(22.0*screenWidthRatio, 10.0*screenHeightRatio),
+        activeSize: Size(
+          22.0 * context.screenWidthRatio,
+          10.0 * context.screenHeightRatio,
+        ),
         activeColor: AppColors.goldColor,
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(25.0)),

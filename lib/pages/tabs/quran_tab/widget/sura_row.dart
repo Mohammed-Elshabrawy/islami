@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/utils/App_routes.dart';
-import '../../../model/sura_list/sura_list.dart';
-import '../../../utils/app_assets.dart';
-import '../../../utils/app_fonts.dart';
-import '../../../utils/responsive.dart';
+import '../../../../model/sura_list/sura_list.dart';
+import '../../../../utils/app_assets.dart';
+import '../../../../utils/app_fonts.dart';
+import '../../../../utils/responsive.dart';
 
 class SuraRow extends StatelessWidget {
   const SuraRow({super.key, required this.index});
@@ -12,10 +12,6 @@ class SuraRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeightRatio = screenHeight / Responsive.uiHeight;
-    double screenWidthRatio = screenWidth / Responsive.uiWidth;
     return InkWell(
       onTap: (){
         Navigator.pushNamed(context, AppRoutes.suraDetails,arguments: index);
@@ -29,7 +25,7 @@ class SuraRow extends StatelessWidget {
               Text('${index + 1}', style: AppFonts.bold20White),
             ],
           ),
-          SizedBox(width: 24 * screenWidthRatio),
+          SizedBox(width: 24 * context.screenWidthRatio),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
