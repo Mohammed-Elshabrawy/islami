@@ -41,6 +41,11 @@ class AppFonts {
     fontWeight: FontWeight.bold,
     color: AppColors.goldColor,
   );
+  static const TextStyle bold14Gold = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    color: AppColors.goldColor,
+  );
   static const TextStyle bold24Gold = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,

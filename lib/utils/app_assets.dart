@@ -27,4 +27,6 @@ class AppAssets {
   static const String appSuraImage = "$quranTabRoot/img_most_recent.png";
   static const String appSuraTile = '$quranTabRoot/sura_tile.png';
   static const String appSuraDetails = '$quranTabRoot/details.png';
+  static const String appHadeethFile = 'assets/files/hadeeth';
+  static const String appSuraFile = 'assets/files/suras';
 }

@@ -69,6 +69,8 @@ flutter:
     - assets/images/home_screen/
     - assets/images/icon/
     - assets/images/quran_tab/
+    - assets/files/suras/
+    - assets/files/hadeeth/
 
 
 
