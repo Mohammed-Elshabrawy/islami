@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_native_splash: ^2.4.7
   introduction_screen: ^4.0.0
+  carousel_slider: ^5.1.1
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,7 @@ flutter:
     - assets/images/quran_tab/
     - assets/files/suras/
     - assets/files/hadeeth/
+    - assets/images/hadeeth_tab/hadeeth_bg.png
 
 
 
