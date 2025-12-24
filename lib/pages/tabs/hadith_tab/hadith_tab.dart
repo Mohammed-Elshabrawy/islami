@@ -17,7 +17,6 @@ class _HadithTabState extends State<HadithTab> {
   final List<Hadeeth> hadeethList = [];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     loadHadithFile();
   }
