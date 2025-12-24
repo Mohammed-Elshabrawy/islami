@@ -26,6 +26,16 @@ class AppFonts {
     fontWeight: FontWeight.bold,
     color: AppColors.blackColor,
   );
+  static const TextStyle bold20Black = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: AppColors.blackColor,
+  );
+  static const TextStyle bold16Black = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: AppColors.blackColor,
+  );
   static const TextStyle bold14White = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.bold,
