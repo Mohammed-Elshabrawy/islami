@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../model/hadeeth.dart';
-import '../../../../utils/App_routes.dart';
+import '../../../../utils/app_routes.dart';
 import '../../../../utils/app_assets.dart';
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_fonts.dart';
