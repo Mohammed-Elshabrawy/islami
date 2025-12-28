@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:islami/pages/tabs/hadith_tab/hadith_tab.dart';
 import 'package:islami/pages/tabs/quran_tab/quran_tab.dart';
 import 'package:islami/pages/tabs/sebha_tab/sebha_tab.dart';
-import 'package:islami/utils/responsive.dart';
 import 'widget/my_nav_bar_icon.dart';
 import '../../utils/app_assets.dart';
 import '../../utils/app_colors.dart';
@@ -32,89 +31,84 @@ class _HomeScreenState extends State<HomeScreen> {
     RadioTab(),
     TimeTab(),
   ];
-
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        alignment: Alignment.topCenter,
-        children: [
-          Image.asset(
-            images[currentIndex],
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
-          SingleChildScrollView(
-            child: Column(
-              spacing: context.screenHeightRatio*16,
-              children: [
-                Image.asset(AppAssets.appLogo),
-                pages[currentIndex],
-              ],
+    return Stack(
+      children: [
+        Image.asset(
+          images[currentIndex],
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.cover,
+        ),
+        Scaffold(
+          body: SafeArea(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [Image.asset(AppAssets.appLogo), pages[currentIndex]],
+              ),
             ),
           ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: (index) {
-          setState(() {
-            currentIndex = index;
-          });
-        },
-        currentIndex: currentIndex,
-        backgroundColor: AppColors.goldColor,
-        selectedItemColor: AppColors.blackColor,
-        unselectedItemColor: AppColors.blackColor,
-        items: [
-          BottomNavigationBarItem(
-            icon: MyNavBarIcon(
-              index: 0,
-              currentIndex: currentIndex,
-              imageIcon: AppAssets.appIconQuran,
-            ),
-            label: "Quran",
+          bottomNavigationBar: BottomNavigationBar(
+            onTap: (index) {
+              setState(() {
+                currentIndex = index;
+              });
+            },
+            currentIndex: currentIndex,
             backgroundColor: AppColors.goldColor,
+            selectedItemColor: AppColors.blackColor,
+            unselectedItemColor: AppColors.blackColor,
+            items: [
+              BottomNavigationBarItem(
+                icon: MyNavBarIcon(
+                  index: 0,
+                  currentIndex: currentIndex,
+                  imageIcon: AppAssets.appIconQuran,
+                ),
+                label: "Quran",
+                backgroundColor: AppColors.goldColor,
+              ),
+              BottomNavigationBarItem(
+                icon: MyNavBarIcon(
+                  index: 1,
+                  currentIndex: currentIndex,
+                  imageIcon: AppAssets.appIconHadith,
+                ),
+                label: "Hadith",
+                backgroundColor: AppColors.goldColor,
+              ),
+              BottomNavigationBarItem(
+                icon: MyNavBarIcon(
+                  index: 2,
+                  currentIndex: currentIndex,
+                  imageIcon: AppAssets.appIconSebha,
+                ),
+                label: "Sebha",
+                backgroundColor: AppColors.goldColor,
+              ),
+              BottomNavigationBarItem(
+                icon: MyNavBarIcon(
+                  index: 3,
+                  currentIndex: currentIndex,
+                  imageIcon: AppAssets.appIconRadio,
+                ),
+                label: "Radio",
+                backgroundColor: AppColors.goldColor,
+              ),
+              BottomNavigationBarItem(
+                icon: MyNavBarIcon(
+                  index: 4,
+                  currentIndex: currentIndex,
+                  imageIcon: AppAssets.appIconTime,
+                ),
+                label: "Time",
+                backgroundColor: AppColors.goldColor,
+              ),
+            ],
           ),
-          BottomNavigationBarItem(
-            icon: MyNavBarIcon(
-              index: 1,
-              currentIndex: currentIndex,
-              imageIcon: AppAssets.appIconHadith,
-            ),
-            label: "Hadith",
-            backgroundColor: AppColors.goldColor,
-          ),
-          BottomNavigationBarItem(
-            icon: MyNavBarIcon(
-              index: 2,
-              currentIndex: currentIndex,
-              imageIcon: AppAssets.appIconSebha,
-            ),
-            label: "Sebha",
-            backgroundColor: AppColors.goldColor,
-          ),
-          BottomNavigationBarItem(
-            icon: MyNavBarIcon(
-              index: 3,
-              currentIndex: currentIndex,
-              imageIcon: AppAssets.appIconRadio,
-            ),
-            label: "Radio",
-            backgroundColor: AppColors.goldColor,
-          ),
-          BottomNavigationBarItem(
-            icon: MyNavBarIcon(
-              index: 4,
-              currentIndex: currentIndex,
-              imageIcon: AppAssets.appIconTime,
-            ),
-            label: "Time",
-            backgroundColor: AppColors.goldColor,
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
