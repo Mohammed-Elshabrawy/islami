@@ -3,10 +3,11 @@ class AppAssets {
   static const String homeScreenRoot = "assets/images/home_screen";
   static const String iconRoot = "assets/images/icon";
   static const String quranTabRoot = "assets/images/quran_tab";
+  static const String sebhaTabRoot = "assets/images/sebha_tab";
 
   static const String appLogo = "assets/images/logo/islami_logo.png";
 
-  static final String appOnboarding1 = "$onBoardingRoot/onboarding1.png";
+  static const String appOnboarding1 = "$onBoardingRoot/onboarding1.png";
   static const String appOnboarding2 = "$onBoardingRoot/onboarding2.png";
   static const String appOnboarding3 = "$onBoardingRoot/onboarding3.png";
   static const String appOnboarding4 = "$onBoardingRoot/onboarding4.png";
@@ -28,6 +29,9 @@ class AppAssets {
   static const String appSuraTile = '$quranTabRoot/sura_tile.png';
   static const String appSuraDetails = '$quranTabRoot/details.png';
   static const String appHadeethBG = 'assets/images/hadeeth_tab/hadeeth_bg.png';
+
+  static const String appSebhaHead = '$sebhaTabRoot/head.png';
+  static const String appSebhaBody = '$sebhaTabRoot/body.png';
 
   static const String appHadeethFile = 'assets/files/hadeeth';
   static const String appSuraFile = 'assets/files/suras';

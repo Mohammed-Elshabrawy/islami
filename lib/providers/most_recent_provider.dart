@@ -5,7 +5,7 @@ import '../pages/home_screen/shared_perf_utils.dart';
 class MostRecentProvider extends ChangeNotifier {
   //func and variables
   List<int> mostRecentList = [];
-   void getLastSuraIndex() async {
+  void getLastSuraIndex() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> mostRecentListIn =
         prefs.getStringList(SharedPerfKeys.mostRecentlyKey) ?? [];
