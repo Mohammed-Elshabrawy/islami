@@ -4,6 +4,7 @@ class AppAssets {
   static const String iconRoot = "assets/images/icon";
   static const String quranTabRoot = "assets/images/quran_tab";
   static const String sebhaTabRoot = "assets/images/sebha_tab";
+  static const String timeTabRoot = "assets/images/time_tab";
 
   static const String appLogo = "assets/images/logo/islami_logo.png";
 
@@ -35,4 +36,10 @@ class AppAssets {
 
   static const String appHadeethFile = 'assets/files/hadeeth';
   static const String appSuraFile = 'assets/files/suras';
+
+  static const String appTimeWidget = '$timeTabRoot/time_widget.png';
+  static const String eveningAzkar = '$timeTabRoot/evening_azkar.png';
+  static const String morningAzkar = '$timeTabRoot/morning_azkar.png';
+  static const String sleepingAzkar = '$timeTabRoot/sleeping_azkar.png';
+  static const String wakingAzkar = '$timeTabRoot/waking_azkar.png';
 }

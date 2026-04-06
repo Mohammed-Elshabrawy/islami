@@ -73,6 +73,7 @@ flutter:
     - assets/images/icon/
     - assets/images/quran_tab/
     - assets/images/sebha_tab/
+    - assets/images/time_tab/
     - assets/files/suras/
     - assets/files/hadeeth/
     - assets/images/hadeeth_tab/hadeeth_bg.png
