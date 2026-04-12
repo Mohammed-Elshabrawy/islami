@@ -3,7 +3,5 @@ class AppRoutes {
   static const onBoarding = "onBoarding";
   static const suraDetails = "suraDetails";
   static const hadeethDetails = "hadeethDetails";
-
-
-
+  static const azkarDetails = "azkarDetails";
 }
