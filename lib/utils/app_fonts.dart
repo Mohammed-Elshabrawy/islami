@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
 class AppFonts {
-  static final TextStyle bold16White = TextStyle(
+  static const TextStyle bold16White = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.bold,
     color: AppColors.whiteColor,
@@ -60,6 +60,11 @@ class AppFonts {
     fontSize: 14,
     fontWeight: FontWeight.bold,
     color: AppColors.goldColor,
+  );
+  static const TextStyle bold24White = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: AppColors.whiteColor,
   );
   static const TextStyle bold24Gold = TextStyle(
     fontSize: 24,
