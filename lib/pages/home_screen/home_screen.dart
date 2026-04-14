@@ -24,13 +24,15 @@ class _HomeScreenState extends State<HomeScreen> {
     AppAssets.appBG4,
     AppAssets.appBG5,
   ];
-  List<Widget> pages = [
-    QuranTab(),
-    HadithTab(),
-    SebhaTab(),
-    RadioTab(),
-    TimeTab(),
+
+  final List<Widget> pages = [
+    const QuranTab(),
+    const HadithTab(),
+    const SebhaTab(),
+    const RadioTab(),
+    const TimeTab(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -42,11 +44,13 @@ class _HomeScreenState extends State<HomeScreen> {
           fit: BoxFit.cover,
         ),
         Scaffold(
+          backgroundColor: Colors.transparent,
           body: SafeArea(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [Image.asset(AppAssets.appLogo), pages[currentIndex]],
-              ),
+            child: Column(
+              children: [
+                Image.asset(AppAssets.appLogo),
+                Expanded(child: pages[currentIndex]),
+              ],
             ),
           ),
           bottomNavigationBar: BottomNavigationBar(
@@ -59,6 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: AppColors.goldColor,
             selectedItemColor: AppColors.blackColor,
             unselectedItemColor: AppColors.blackColor,
+            type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(
                 icon: MyNavBarIcon(
@@ -67,7 +72,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   imageIcon: AppAssets.appIconQuran,
                 ),
                 label: "Quran",
-                backgroundColor: AppColors.goldColor,
               ),
               BottomNavigationBarItem(
                 icon: MyNavBarIcon(
@@ -76,7 +80,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   imageIcon: AppAssets.appIconHadith,
                 ),
                 label: "Hadith",
-                backgroundColor: AppColors.goldColor,
               ),
               BottomNavigationBarItem(
                 icon: MyNavBarIcon(
@@ -85,7 +88,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   imageIcon: AppAssets.appIconSebha,
                 ),
                 label: "Sebha",
-                backgroundColor: AppColors.goldColor,
               ),
               BottomNavigationBarItem(
                 icon: MyNavBarIcon(
@@ -94,7 +96,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   imageIcon: AppAssets.appIconRadio,
                 ),
                 label: "Radio",
-                backgroundColor: AppColors.goldColor,
               ),
               BottomNavigationBarItem(
                 icon: MyNavBarIcon(
@@ -103,7 +104,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   imageIcon: AppAssets.appIconTime,
                 ),
                 label: "Time",
-                backgroundColor: AppColors.goldColor,
               ),
             ],
           ),

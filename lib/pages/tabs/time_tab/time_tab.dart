@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami/pages/tabs/time_tab/cubit/time_cubit.dart';
 import 'package:islami/pages/tabs/time_tab/cubit/time_state.dart';
 import 'package:islami/pages/tabs/time_tab/widget/azkar_widget.dart';
+import 'package:islami/pages/tabs/time_tab/widget/time_loading_widget.dart';
 import 'package:islami/pages/tabs/time_tab/widget/time_widget.dart';
 import '../../../utils/app_assets.dart';
 import '../../../utils/app_colors.dart';
@@ -69,14 +70,7 @@ class TimeTab extends StatelessWidget {
               BlocBuilder<TimeCubit, TimeState>(
                 builder: (context, state) {
                   if (state is TimeLoading) {
-                    return SizedBox(
-                      height: 300 * context.screenHeightRatio,
-                      child: const Center(
-                        child: CircularProgressIndicator(
-                          color: AppColors.goldColor,
-                        ),
-                      ),
-                    );
+                    return const TimeLoadingWidget();
                   } else if (state is TimeError) {
                     return Center(child: Text("Error: ${state.message}"));
                   } else if (state is TimeSuccess) {

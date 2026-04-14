@@ -5,6 +5,7 @@ class AppAssets {
   static const String quranTabRoot = "assets/images/quran_tab";
   static const String sebhaTabRoot = "assets/images/sebha_tab";
   static const String timeTabRoot = "assets/images/time_tab";
+  static const String radioTabRoot = 'assets/images/radio_tab';
 
   static const String appLogo = "assets/images/logo/islami_logo.png";
 
@@ -42,4 +43,7 @@ class AppAssets {
   static const String morningAzkar = '$timeTabRoot/morning_azkar.png';
   static const String sleepingAzkar = '$timeTabRoot/sleeping_azkar.png';
   static const String wakingAzkar = '$timeTabRoot/waking_azkar.png';
+
+  static const String radioBg = '$radioTabRoot/radio_bg.png';
+  static const String radioBgOn = '$radioTabRoot/radio_bg_on.png';
 }

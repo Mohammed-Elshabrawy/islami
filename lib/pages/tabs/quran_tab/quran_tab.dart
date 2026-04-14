@@ -50,40 +50,37 @@ class _QuranTabState extends State<QuranTab> {
               ),
             ),
           ),
-          SizedBox(
-            height: 540 * context.screenHeightRatio,
+          Expanded(
             child: SingleChildScrollView(
               child: Column(
                 spacing: 10 * context.screenHeightRatio,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  MostRecently(),
+                  const MostRecently(),
                   Text("Sura List", style: AppFonts.bold16White),
-                  SizedBox(
-                    child: filterList.isEmpty
-                        ? Center(
-                            child: Text(
-                              "no sura found",
-                              style: AppFonts.bold20White,
-                            ),
-                          )
-                        : ListView.separated(
-                            shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
-                            itemBuilder: (context, index) =>
-                                SuraRow(index: filterList[index]),
-                            separatorBuilder: (context, index) => Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 10 * context.screenHeightRatio,
-                              ),
-                              child: Divider(
-                                indent: 40 * context.screenWidthRatio,
-                                endIndent: 40 * context.screenWidthRatio,
-                              ),
-                            ),
-                            itemCount: filterList.length,
+                  filterList.isEmpty
+                      ? Center(
+                          child: Text(
+                            "no sura found",
+                            style: AppFonts.bold20White,
                           ),
-                  ),
+                        )
+                      : ListView.separated(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemBuilder: (context, index) =>
+                              SuraRow(index: filterList[index]),
+                          separatorBuilder: (context, index) => Padding(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10 * context.screenHeightRatio,
+                            ),
+                            child: const Divider(
+                              indent: 40,
+                              endIndent: 40,
+                            ),
+                          ),
+                          itemCount: filterList.length,
+                        ),
                 ],
               ),
             ),
