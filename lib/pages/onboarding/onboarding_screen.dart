@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:islami/pages/home_screen/home_screen.dart';
 import 'package:islami/utils/app_colors.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../utils/app_assets.dart';
 import '../../utils/responsive.dart';
@@ -16,7 +17,11 @@ class OnBoardingPage extends StatefulWidget {
 class OnBoardingPageState extends State<OnBoardingPage> {
   final introKey = GlobalKey<IntroductionScreenState>();
 
-  void _onIntroEnd(BuildContext context) {
+  Future<void> _onIntroEnd(BuildContext context) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('onboarding_completed', true);
+    
+    if (!mounted) return;
     Navigator.of(
       context,
     ).pushReplacement(MaterialPageRoute(builder: (_) => const HomeScreen()));
