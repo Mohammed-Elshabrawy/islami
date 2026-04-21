@@ -21,7 +21,13 @@ A comprehensive Islamic application built with Flutter, designed to provide user
 ## Demo
 
 <p align="center">
-  <video src="./screenshots/demo.mp4" width="400" controls></video>
+  <a href="./screenshots/demo.mp4"><b>🎥 View Demo Video</b></a>
+</p>
+
+<p align="center">
+  <video src="screenshots/demo.mp4" type="video/mp4" width="400" controls>
+    Your browser does not support the video tag.
+  </video>
 </p>
 
 ## Screenshots
