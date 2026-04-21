@@ -18,6 +18,12 @@ A comprehensive Islamic application built with Flutter, designed to provide user
     - Elegant gold and dark theme inspired by Islamic art.
 - **Onboarding**: A dedicated introduction screen for first-time users.
 
+## Demo
+
+<p align="center">
+  <video src="./screenshots/demo.mp4" width="400" controls></video>
+</p>
+
 ## Screenshots
 
 <p align="center">
