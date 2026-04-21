@@ -36,6 +36,12 @@ A comprehensive Islamic application built with Flutter, designed to provide user
   <img src="./screenshots/Screenshot_2026-04-21-14-39-37-52_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
   <img src="./screenshots/Screenshot_2026-04-21-14-39-49-00_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
 </p>
+<p align="center">
+  <img src="./screenshots/Screenshot_2026-04-21-14-56-46-37_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
+  <img src="./screenshots/Screenshot_2026-04-21-14-56-55-94_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
+  <img src="./screenshots/Screenshot_2026-04-21-14-57-01-67_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
+  <img src="./screenshots/Screenshot_2026-04-21-14-57-08-49_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
+</p>
 
 ## Main Dependencies
 
