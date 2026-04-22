@@ -21,7 +21,7 @@ A comprehensive Islamic application built with Flutter, designed to provide user
 ## Demo
 
 <p align="center">
-  <a href="./screenshots/demo.mp4"><b>🎥 View Demo Video</b></a>
+  <a href="https://drive.google.com/file/d/1M4OqAwqub0mT2yTIHYiZbwQIu_NaGtLT/view?usp=drive_link"><b>🎥 View Demo Video</b></a>
 </p>
 
 <p align="center">
@@ -31,6 +31,8 @@ A comprehensive Islamic application built with Flutter, designed to provide user
 </p>
 
 ## Screenshots
+
+Explore the app's elegant interface and core functionalities through these visuals.
 
 <p align="center">
   <img src="./screenshots/Screenshot_20260420_171028.png" width="200" />
