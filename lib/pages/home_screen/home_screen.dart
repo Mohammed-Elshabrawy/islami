@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/pages/tabs/hadith_tab/hadith_tab.dart';
 import 'package:islami/pages/tabs/quran_tab/quran_tab.dart';
 import 'package:islami/pages/tabs/sebha_tab/sebha_tab.dart';
+import 'package:islami/pages/tabs/qibla_tab/qibla_tab.dart';
 import 'widget/my_nav_bar_icon.dart';
 import '../../utils/app_assets.dart';
 import '../../utils/app_colors.dart';
@@ -23,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     AppAssets.appBG3,
     AppAssets.appBG4,
     AppAssets.appBG5,
+    AppAssets.appBG6,
   ];
 
   final List<Widget> pages = [
@@ -31,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const SebhaTab(),
     const RadioTab(),
     const TimeTab(),
+    const QiblaTab(),
   ];
 
   @override
@@ -104,6 +107,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   imageIcon: AppAssets.appIconTime,
                 ),
                 label: "Time",
+              ),
+              BottomNavigationBarItem(
+                icon: MyNavBarIcon(
+                  index: 5,
+                  currentIndex: currentIndex,
+                  icon: Icons.explore,
+                ),
+                label: "Qibla",
               ),
             ],
           ),
