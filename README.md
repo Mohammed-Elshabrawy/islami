@@ -60,7 +60,7 @@ Explore the app's elegant interface and core functionalities through these visua
   <img src="./screenshots/Screenshot_2026-04-21-14-56-55-94_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
   <img src="./screenshots/Screenshot_2026-04-21-14-57-01-67_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
   <img src="./screenshots/Screenshot_2026-04-21-14-57-08-49_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
-  <img src="./assets/images/gif/8_motion.gif" width="200" />
+  <img src="./screenshots/qibla.gif" width="200" />
 </p>
 
 ## Main Dependencies
