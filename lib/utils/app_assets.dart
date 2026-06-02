@@ -6,6 +6,7 @@ class AppAssets {
   static const String sebhaTabRoot = "assets/images/sebha_tab";
   static const String timeTabRoot = "assets/images/time_tab";
   static const String radioTabRoot = 'assets/images/radio_tab';
+  static const String qiblaTabRoot = "assets/images/qibla_tab";
 
   static const String appLogo = "assets/images/logo/islami_logo.png";
 
@@ -20,12 +21,14 @@ class AppAssets {
   static const String appBG3 = "$homeScreenRoot/sebha.png";
   static const String appBG4 = "$homeScreenRoot/radio.png";
   static const String appBG5 = "$homeScreenRoot/time.png";
+  static const String appBG6 = "$homeScreenRoot/qebla_bg.png"; // Placeholder background
 
   static const String appIconQuran = "$iconRoot/ic_quran.png";
   static const String appIconHadith = "$iconRoot/hadith.png";
   static const String appIconSebha = "$iconRoot/sebha.png";
   static const String appIconRadio = "$iconRoot/radio.png";
   static const String appIconTime = "$iconRoot/time.png";
+  static const String appIconQibla = "$iconRoot/time.png"; // Placeholder icon
 
   static const String appSuraImage = "$quranTabRoot/img_most_recent.png";
   static const String appSuraTile = '$quranTabRoot/sura_tile.png';
@@ -46,4 +49,8 @@ class AppAssets {
 
   static const String radioBg = '$radioTabRoot/radio_bg.png';
   static const String radioBgOn = '$radioTabRoot/radio_bg_on.png';
+
+  static const String qiblaCompass = "$qiblaTabRoot/compass.png";
+  static const String qiblaNeedle = "$qiblaTabRoot/needle.png";
+  static const String qiblaCalibrationGif = "assets/images/gif/8_motion.gif";
 }

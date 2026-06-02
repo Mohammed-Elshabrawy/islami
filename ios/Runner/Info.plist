@@ -49,5 +49,9 @@
 		<true/>
 		<key>UIViewControllerBasedStatusBarAppearance</key>
 		<false/>
+		<key>NSLocationWhenInUseUsageDescription</key>
+		<string>This app needs access to location to calculate Qibla direction.</string>
+		<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+		<string>This app needs access to location to calculate Qibla direction.</string>
 	</dict>
 </plist>
