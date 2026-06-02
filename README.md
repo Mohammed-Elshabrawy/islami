@@ -12,6 +12,11 @@ A comprehensive Islamic application built with Flutter, designed to provide user
 - **Azkar & Duas**: Categorized Azkar (Morning, Evening, Sleeping, etc.) with detailed views.
 - **Hadith**: Access to a collection of Hadiths.
 - **Sebha**: Digital tasbih for dhikr.
+- **Qibla Finder**: 
+    - Real-time compass to find the Qibla direction.
+    - **Visual Feedback**: The needle and border turn green when correctly aligned.
+    - **Haptic Feedback**: The device vibrates upon successful alignment.
+    - **Calibration Support**: Detection of unreliable sensor states with a guiding calibration GIF.
 - **Modern UI/UX**:
     - Responsive design for different screen sizes.
     - **Skeleton Loading**: Smooth shimmer effects instead of traditional loaders for a better user experience.
@@ -55,6 +60,7 @@ Explore the app's elegant interface and core functionalities through these visua
   <img src="./screenshots/Screenshot_2026-04-21-14-56-55-94_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
   <img src="./screenshots/Screenshot_2026-04-21-14-57-01-67_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
   <img src="./screenshots/Screenshot_2026-04-21-14-57-08-49_81a50f09005f4e819a34107cabb2fb9b.jpg" width="200" />
+  <img src="./assets/images/gif/8_motion.gif" width="200" />
 </p>
 
 ## Main Dependencies
@@ -63,7 +69,7 @@ Explore the app's elegant interface and core functionalities through these visua
 - **State Management**: [flutter_bloc](https://pub.dev/packages/flutter_bloc) & [provider](https://pub.dev/packages/provider)
 - **Networking**: [dio](https://pub.dev/packages/dio), [retrofit](https://pub.dev/packages/retrofit) & [pretty_dio_logger](https://pub.dev/packages/pretty_dio_logger)
 - **Audio Playback**: [just_audio](https://pub.dev/packages/just_audio)
-- **Location Services**: [geolocator](https://pub.dev/packages/geolocator)
+- **Location & Compass**: [geolocator](https://pub.dev/packages/geolocator) & [flutter_qiblah](https://pub.dev/packages/flutter_qiblah)
 - **UI Components**: [carousel_slider](https://pub.dev/packages/carousel_slider) & [introduction_screen](https://pub.dev/packages/introduction_screen)
 - **Local Storage**: [shared_preferences](https://pub.dev/packages/shared_preferences)
 - **Utilities**: [intl](https://pub.dev/packages/intl), [json_annotation](https://pub.dev/packages/json_annotation), [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
